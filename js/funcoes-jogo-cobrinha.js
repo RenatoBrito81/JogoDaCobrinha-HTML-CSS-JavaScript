@@ -6,6 +6,11 @@ var cobrinha = [{
     eixoY: 8 * 32
 }];
 
+var fruta = {
+    eixoX: Math.floor(Math.random() * 15 + 1) * caixa,
+    eixoY: Math.floor(Math.random() * 15 + 1) * caixa
+}
+
 var direcao = "direita";
 
 //Função para criar a área do jogo
@@ -20,6 +25,13 @@ function criarCobrinha(){
         contexto.fillStyle = "green";
         contexto.fillRect(cob.eixoX, cob.eixoY, caixa, caixa);
     }
+}
+
+//Função para criar a frutinha
+function criarFrutinha(){
+    //Cria frutinha na tela
+    contexto.fillStyle = "red";
+    contexto.fillRect(fruta.eixoX, fruta.eixoY, caixa, caixa);
 }
 
 //Cria evento para verificar o teclado
@@ -50,6 +62,8 @@ function movimentarCobrinha(){
 
     //Cria cobrinha na área do jogo
     criarCobrinha();
+
+    criarFrutinha();
 
     //***
     let posicaoEixoX = cobrinha[0].eixoX;
