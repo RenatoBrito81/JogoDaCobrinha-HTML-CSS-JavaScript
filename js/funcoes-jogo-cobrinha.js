@@ -102,4 +102,4 @@ function movimentarCobrinha(){
 }
 
 //Função para fazer os movimentos da cobrinha
-var movimentar = setInterval(movimentarCobrinha, 250);
+var movimentar = setInterval(movimentarCobrinha, 100);
