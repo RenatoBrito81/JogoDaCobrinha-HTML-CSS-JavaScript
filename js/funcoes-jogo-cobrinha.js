@@ -75,8 +75,16 @@ function movimentarCobrinha(){
     if(direcao == "subir") posicaoEixoY -= caixa;
     if(direcao == "descer") posicaoEixoY += caixa;
 
-    //Retira última posicao do array da cobrinha
-    cobrinha.pop();
+    //Verifica se a cobrinha pegou a frutinha
+    if(posicaoEixoX !== fruta.eixoX || posicaoEixoY !== fruta.eixoY){
+        //Retira última posicao do array da cobrinha
+        cobrinha.pop();
+    }
+    else{
+        fruta.eixoX = Math.floor(Math.random() * 15 + 1) * caixa;
+        fruta.eixoY = Math.floor(Math.random() * 15 + 1) * caixa;
+    }
+    
 
     //Incluí nova posição no inicio do array da cobrinha
     cobrinha.unshift({
