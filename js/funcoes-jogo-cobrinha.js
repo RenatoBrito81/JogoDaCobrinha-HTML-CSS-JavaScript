@@ -57,6 +57,14 @@ function movimentarCobrinha(){
     if(cobrinha[0].eixoY > (15 * caixa) && direcao === "descer") cobrinha[0].eixoY = 0;
     if(cobrinha[0].eixoY < 0 && direcao === "subir") cobrinha[0].eixoY = 15 * caixa;
 
+    //Verifica se a cabeça se choca com o corpo
+    for (let i = 1; i < cobrinha.length; i++) {
+        if(cobrinha[0].eixoX === cobrinha[i].eixoX && cobrinha[0].eixoY === cobrinha[i].eixoY){
+            clearInterval(movimentar);
+            alert("Game Over!");
+        }
+    }
+
     //Cria área do jogo
     criarAreaJogo();
 
