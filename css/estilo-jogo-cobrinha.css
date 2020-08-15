@@ -1,4 +1,4 @@
-body{
+/*body{
     height: 95vh;
     width: 95;
     display: flex;
@@ -6,4 +6,131 @@ body{
     justify-content: center;
     align-items: center;
     color: rgb(44, 139, 44);
+}*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#principal{
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid black;
+}
+
+div#secundaria{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border: 5px solid red;
+}
+
+div#titulo-jogo{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bolder;
+
+    border: 5px solid cyan;
+}
+
+div#area-jogo{
+    border: 5px solid orange;
+}
+
+div#area{
+    border: 5px solid blue;
+}
+
+div#configuracao-jogo{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+    border: 5px solid cyan;
+}
+
+select#lista-velocidades{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+div#botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 5px solid yellow;
+}
+
+div#botoes button{
+    height: 40px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+}
+
+div#placar{
+    width: 30%;
+    border: 5px solid green;
+}
+
+div#titulo-ranking{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: 5px solid black;
+}
+
+div#area-ranking{
+    /*display: flex;
+    flex-direction: column;
+    
+    text-align: justify;
+    font-size: 20px;*/
+    border: 5px solid red;
+}
+
+div#P1, div#P2, div#P3, div#P4, div#P5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#botoes-ranking{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 5px solid blue;
+}
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 2px solid #000;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  tr#tabela-cabecalho{
+      font-weight: bold;
+  }
+
+  div#botoes-ranking button{
+    height: 40px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
 }
