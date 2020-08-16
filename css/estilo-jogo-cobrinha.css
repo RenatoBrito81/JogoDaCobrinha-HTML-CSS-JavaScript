@@ -1,13 +1,3 @@
-/*body{
-    height: 95vh;
-    width: 95;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: rgb(44, 139, 44);
-}*/
-
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,16 +5,15 @@ body{
 div#principal{
     display: flex;
     flex-direction: column;
-
-    border: 5px solid black;
 }
 
 div#secundaria{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-    border: 5px solid red;
+    margin-top: -5px;
+    padding: 5px;
+    border: 5px solid black;
 }
 
 div#titulo-jogo{
@@ -32,16 +21,12 @@ div#titulo-jogo{
     text-transform: uppercase;
     font-size: 40px;
     font-weight: bolder;
-
-    border: 5px solid cyan;
+    border: 5px solid black;
 }
 
-div#area-jogo{
-    border: 5px solid orange;
-}
-
-div#area{
-    border: 5px solid blue;
+div#configuracao{
+    display: flex;
+    flex-direction: row;
 }
 
 div#configuracao-jogo{
@@ -51,7 +36,21 @@ div#configuracao-jogo{
     justify-content: center;
     padding: 10px;
     font-size: 20px;
-    border: 5px solid cyan;
+    width: 50%;
+}
+
+div#configuracao-centro-div{
+    border-left: 3px solid black;
+}
+
+div#configuracao-placar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 50%;
 }
 
 select#lista-velocidades{
@@ -64,36 +63,27 @@ div#botoes{
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 5px solid yellow;
+    justify-content: space-evenly;
 }
 
 div#botoes button{
     height: 40px;
     font-size: 15px;
     color: black;
+    width: 120px;
     cursor: pointer;
 }
 
 div#placar{
     width: 30%;
-    border: 5px solid green;
-}
-
-div#titulo-ranking{
-    text-align: center;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    border: 5px solid black;
 }
 
 div#area-ranking{
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    justify-content: center;
     text-align: justify;
-    font-size: 20px;*/
-    border: 5px solid red;
 }
 
 div#P1, div#P2, div#P3, div#P4, div#P5{
@@ -106,11 +96,9 @@ div#botoes-ranking{
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 5px solid blue;
 }
 
 table{
-    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -120,7 +108,7 @@ td, th {
     padding: 5px;
   }
   
-  tr:nth-child(even) {
+  tr:nth-child(2n+3) {
     background-color: #dddddd;
   }
 
